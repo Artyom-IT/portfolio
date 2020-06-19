@@ -1,0 +1,28 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.db__sheets {
+  margin-top: $db-header-height;
+  background-color: #dadce0;
+  padding: 1.5em
+}
+
+.db__create {
+  width: 160px;
+  height: 160px;
+  background-color: #FFF;
+  background-repeat: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+
+  &:hover {
+    text-decoration: underline;
+    box-shadow:  0 0 5px rgba(255, 255, 255, .6);
+  }
+}

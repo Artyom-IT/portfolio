@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -26,6 +27,7 @@ const jsLoader = () => {
 }
 
 module.exports = {
+  target: 'web',
   context: path.resolve(__dirname, 'src'),
   entry: ['@babel/polyfill', './index.js'],
   output: {
@@ -56,9 +58,13 @@ module.exports = {
         },
       ],
     }),
+    new SpriteLoaderPlugin(),
   ],
   devServer: {
-    port: 3000,
+    host: '0.0.0.0',
+    watchContentBase: true,
+    compress: true,
+    port: 9001,
     hot: isDev,
   },
   devtool: isDev ? 'source-map' : '',
@@ -82,6 +88,13 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: jsLoader(),
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          'svg-sprite-loader',
+          'svgo-loader',
+        ],
       },
     ],
   },

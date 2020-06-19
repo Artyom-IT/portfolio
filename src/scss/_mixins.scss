@@ -1,0 +1,16 @@
+@mixin button($color: green) {
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+  fill: rgba(0, 0, 0, .7);
+
+  &:hover {
+    background-color: #eee;
+    cursor: pointer; 
+  }
+
+  &:active{
+    fill: $color;
+  }
+
+}

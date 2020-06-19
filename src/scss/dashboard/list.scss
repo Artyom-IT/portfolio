@@ -1,0 +1,42 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.db__list__header {
+  display: flex;
+  justify-content: space-between;
+
+  color: #202124;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding: 12px 0;
+}
+
+.db__list {
+}
+
+.db__record {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 12px 14px 12px 16px;
+
+  &:hover {
+    background-color: #e6f4ea;
+    border-radius: 25px;
+  }
+
+}
+
+.db__record a {
+  text-decoration: none;
+  color: #202124;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.db__record strong {
+  
+}

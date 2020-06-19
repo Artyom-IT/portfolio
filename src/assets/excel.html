@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <title>Excel</title>
+</head>
+
+<body>
+
+  <div id="app" class="container">
+
+    <div class="excel">
+
+      <header class="excel__header">
+
+        <input type="text" class="excel__header__input" placeholder="Новая таблица">
+
+        <div class="excel__header__wrapper">
+
+          <svg height="24" width="24" class="excel__header__button">
+            <use xlink:href="#del"></use>
+          </svg>
+
+          <svg height="24" width="24" class="excel__header__button ">
+            <use xlink:href="#exit"></use>
+          </svg>
+
+        </div>
+
+      </header>
+
+      <div class="excel__toolbar">
+
+        <svg height="24" width="24" class="excel__toolbar__button">
+          <use xlink:href="#align-left"></use>
+        </svg>
+
+        <svg height="24" width="24" class="excel__toolbar__button">
+          <use xlink:href="#align-center"></use>
+        </svg>
+
+        <svg height="24" width="24" class="excel__toolbar__button">
+          <use xlink:href="#align-right"></use>
+        </svg>
+
+        <svg height="24" width="24" class="excel__toolbar__button">
+          <use xlink:href="#bold"></use>
+        </svg>
+
+        <svg height="24" width="24" class="excel__toolbar__button">
+          <use xlink:href="#italic"></use>
+        </svg>
+
+        <svg height="24" width="24" class="excel__toolbar__button">
+          <use xlink:href="#underline"></use>
+        </svg>
+
+      </div>
+
+      <div class="excel__formula">
+
+        <div class="excel__formula__title">Fx</div>
+        <div class="excel__formula__input" contenteditable></div>
+
+      </div>
+
+      <div class="excel__field">
+
+        <div class="row">
+          <div class="row__info"></div>
+
+          <div class="row__data">
+
+            <div class="column">A</div>
+            <div class="column">B</div>
+            <div class="column">C</div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row__info">0</div>
+
+          <div class="row__data">
+
+            <div class="row__cell active" contenteditable></div>
+            <div class="row__cell" contenteditable></div>
+            <div class="row__cell" contenteditable></div>
+
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+
+</body>
+
+</html>
